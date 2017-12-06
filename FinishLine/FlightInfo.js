@@ -16,10 +16,11 @@ class FlightInfo extends React.Component {
     return (
       <View style={{
           marginBottom: 10, 
+          padding: 10,
           flex: 1, 
           flexDirection: 'row', 
           justifyContent: 'space-between', 
-          borderWidth: 1, 
+          borderBottomWidth: 1, 
           borderBottomColor: 'lightgray'
       }}>
         <Text style={{fontSize: 48, fontWeight: 'bold'}}>{date}</Text>

@@ -9,8 +9,8 @@ export default class App extends React.Component {
     this.state = {
       current: {
         number: 'BBA017',
-        departure: 'SFO',
-        destination: 'LAX',
+        departure: 'LAX',
+        destination: 'SFO',
         boarding: '9:00',
         arrival: '10:30',
         status: 'on time',
@@ -84,7 +84,7 @@ export default class App extends React.Component {
         break;
       case 'flights':
         main = (
-          <View style={{flex: 1, flexDirection: 'column', justifyContent: 'space-between', padding: 10}}>
+          <View style={{flex: 1, flexDirection: 'column', justifyContent: 'space-between'}}>
             <View>{this.renderCurrentFlight()}</View>
             <View>{this.renderFlights()}</View>
           </View>
@@ -107,11 +107,11 @@ export default class App extends React.Component {
         <View style={{flex: 0.8}}>
           {main}
         </View>
-        {/* <View style={{flex: 0.1}}>
-          <TabBarIOS itemPositioning='center' tint='gray'>
+        <View style={{flex: 0.1}}>
+          <TabBarIOS barTintColor='gray' itemPositioning='center'>
             <TabBarIOS.Item systemIcon='bookmarks' title='Flights' onPress={() => this.setTab('flight')}/>
           </TabBarIOS>
-        </View> */}
+        </View>
       </View>
     );
   }

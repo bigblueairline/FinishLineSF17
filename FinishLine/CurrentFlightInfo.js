@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Button } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Button, Image } from 'react-native';
 import PropTypes from 'prop-types';
 
 class CurrentFlightInfo extends React.Component {
@@ -11,31 +11,29 @@ class CurrentFlightInfo extends React.Component {
   }
 
   viewDetails() {
-
+    
   }
 
   render() {
     const {month, date, dayOfWeek, departure, destination} = this.props;
 
     return (
-      <View style={{flex: 1, flexDirection: 'column', justifyContent: 'space-between'}}>
-        <View style={{flex: 0.8}}>
-          <Text>Upcoming Flights</Text>
-        </View>
-        <View style={{marginBottom: 10, flex: 0.5, flexDirection: 'row', justifyContent: 'space-between'}}>
-          <Text style={{fontSize: 48, fontWeight: 'bold'}}>{date}</Text>
-          <View style={{padding: 10, flex: 0.5, flexDirection: 'column', justifyContent: 'space-between'}}>
+      <View style={{padding: 10}}>
+        <View><Text>Upcoming Flights</Text></View>
+        <View style={{marginBottom: 20}}>
+          <Text style={{fontSize: 108, fontWeight: 'bold'}}>{date}</Text>
+          <View>
             <Text>{month}</Text>
             <Text>{departure} -> {destination}</Text>
           </View>
         </View>
-        {/* <View>
+        <View>
           <Button
             onPress={this.viewDetails}
             title="View details"
-            color="transparent"
+            color="steelblue"
           />
-        </View> */}
+        </View>
       </View>
     )
   }
